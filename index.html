@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Iphone Specs</title>
+        <!--links the external css file to html file-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="images/apple_logo.png" alt="logo">
+                </div>
+                <div class="nav_links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Cart </a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="information">
+                <div class="overlay"></div>
+                <img src="images/phone.png" alt="mobile" class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="images/camera.png" alt="camera">
+                        <div>
+                            <h1>Camera</h1>
+                            <p>12MP Dual Lens, Ultrawide Lens .5x</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="images/processor.png" alt="processor">
+                        <div>
+                            <h1>Processor</h1>
+                            <p>A16 Bionic</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="images/display.png" alt="display">
+                        <div>
+                            <h1>Display</h1>
+                            <p>7 inch Retina display</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="images/battery.png" alt="battery">
+                        <div>
+                            <h1>Battery</h1>
+                            <p>3300mAh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <img src="images/arrow.png" alt="arrow" id="upbutton">
+                <h3>Features</h3>
+                <img src="images/arrow.png" alt="arrow" id="downbutton">
+            </div>
+        </div>
+        <script>
+            var circle = document.getElementById("circle")   // Selects the HTML element with the ID "circle" and stores it in the variable circle
+            var upButton = document.getElementById("upbutton")
+            var downButton = document.getElementById("downbutton")
+            var rotateValue = circle.style.transform;   // Retrieves the current value of the transform property of the "circle" element and stores it in rotateValue
+            var rotateSum;   // to store the updated transform value.
+
+            upButton.onclick = function(){
+                rotateSum = rotateValue + "rotate(-90deg)"
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+            downButton.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)"
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+        </script>
+    </body>
+</html>
